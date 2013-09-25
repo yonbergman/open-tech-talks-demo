@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  person: MyString
+  room: MyString
+  starts_at: 2013-09-24 15:36:34
+  duration: 1
+
+two:
+  title: MyString
+  person: MyString
+  room: MyString
+  starts_at: 2013-09-24 15:36:34
+  duration: 1

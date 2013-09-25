@@ -1,0 +1,21 @@
+%table.table.table-striped
+  %tr
+    %th Title
+    %th Person
+    %th Room
+    %th Starts at
+    %th Duration
+    %th
+    %th
+    %th
+
+  - talks.each do |talk|
+    %tr
+      %td= talk.title
+      %td= talk.person
+      %td= talk.room
+      %td= talk.starts_at
+      %td= talk.duration
+      %td= link_to 'Show', talk
+      %td= link_to 'Edit', edit_talk_path(talk)
+      %td= link_to 'Destroy', talk, :method => :delete, :data => { :confirm => 'Are you sure?' }

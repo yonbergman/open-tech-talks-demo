@@ -1,0 +1,25 @@
+= form_for @talk do |f|
+  - if @talk.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@talk.errors.count, "error")} prohibited this talk from being saved:"
+      %ul
+        - @talk.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :person
+    = f.text_field :person
+  .field
+    = f.label :room
+    = f.text_field :room
+  .field
+    = f.label :starts_at
+    = f.datetime_select :starts_at
+  .field
+    = f.label :duration
+    = f.number_field :duration
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,14 @@
+%h1
+  %i.icon-bullhorn
+  Listing talks
+= render 'talks/talks', :talks => @talks
+%br
+
+- if @show_old
+  %h2 Previous Talks
+  = render 'talks/talks', :talks => @old_talks
+- else
+  = link_to talks_path(:old => true), class: 'btn btn-default' do
+    %i.icon-calendar
+    Show Old Talks
+= link_to 'New Talk', new_talk_path, class: 'btn btn-primary'

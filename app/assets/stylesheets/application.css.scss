@@ -1,0 +1,9 @@
+@import 'compass';
+@import 'twitter/bootstrap';
+@import 'font-awesome';
+
+$background-color: #ccc;
+
+body{
+	background: $background-color;
+}
